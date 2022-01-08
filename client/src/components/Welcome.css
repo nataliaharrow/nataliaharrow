@@ -1,0 +1,62 @@
+.main-container {
+    background: url('../backgroundPic2.jpeg') center center/cover no-repeat; 
+    backdrop-filter: brightness(50%); 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
+    object-fit: contain;
+  }
+  
+  .main-container > h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 25%;
+    color: #fff;
+    font-size: 4vw;
+  }
+  
+  .main-container > p { 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    height: 0%;
+    color: #fff;
+    font-size: 1.5vw;
+    font-family: 'Trebuchet MS';
+  }
+    
+  .slide-left-right {
+    text-decoration:none;
+    display: inline-block;
+    color:#26a69a;
+  }
+
+  /* add a empty string after the elment with class .slide-left-right */
+  .slide-left-right:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease; /* .5 seonds for changes to the width and background-color */
+    -webkit-transition: width .5s ease, background-color .5s ease; /* Chrome and Safari */
+    -moz-transition: width .5s ease, background-color .5s ease; /* FireFox */
+  }
+
+  /* Change the width and background on hover, aka sliding out */
+  .slide-left-right:hover:after {
+    width: 100%;
+    background: #26a69a;
+  }
+
+mark.blue {
+    color:#26a69a;
+    background: none;
+}
