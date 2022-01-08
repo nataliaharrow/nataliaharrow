@@ -1,5 +1,6 @@
 import React from 'react';
 import Welcome from './components/Welcome';
+import About from './components/About';
 import { Grid } from '@material-ui/core';
 
 function App() {
@@ -8,6 +9,9 @@ function App() {
     <div>
         <Grid container >
           <Welcome></Welcome>
+        </Grid>
+        <Grid>
+          <About></About>
         </Grid>
     </div>
     
