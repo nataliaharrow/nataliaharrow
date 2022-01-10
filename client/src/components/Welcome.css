@@ -12,7 +12,7 @@
   .main-container > h1 {
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 52%;
     transform: translate(-50%, -50%);
     width: 60%;
     height: 25%;
@@ -23,15 +23,23 @@
   .main-container > p { 
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: 53%;
     transform: translate(-50%, -50%);
     width: 60%;
-    height: 0%;
     color: #fff;
     font-size: 1.5vw;
-    font-family: 'Trebuchet MS';
+    font-family: 'Roboto';
+
   }
     
+  .main-container > .menu {
+    position: absolute;
+    left: 56%;
+    top: 65%;
+    font-family: 'Roboto';
+    font-size: 1.1em;
+  }
+
   .slide-left-right {
     text-decoration:none;
     display: inline-block;
@@ -52,6 +60,30 @@
 
   /* Change the width and background on hover, aka sliding out */
   .slide-left-right:hover:after {
+    width: 100%;
+    background: #26a69a;
+  }
+
+  .slide-left-right-white {
+    text-decoration:none;
+    display: inline-block;
+    color:#FFFF;
+  }
+
+  /* add a empty string after the elment with class .slide-left-right */
+  .slide-left-right-white:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease; /* .5 seonds for changes to the width and background-color */
+    -webkit-transition: width .5s ease, background-color .5s ease; /* Chrome and Safari */
+    -moz-transition: width .5s ease, background-color .5s ease; /* FireFox */
+  }
+
+  /* Change the width and background on hover, aka sliding out */
+  .slide-left-right-white:hover:after {
     width: 100%;
     background: #26a69a;
   }
