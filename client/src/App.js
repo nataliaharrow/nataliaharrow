@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     justify: 'center',
     alignItems: 'center',
     backgroundColor: "#fafafa",
-    marginTop: '4%'
+    marginTop: '7%',
   }, 
 }));
 

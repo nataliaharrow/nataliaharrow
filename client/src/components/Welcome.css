@@ -29,15 +29,16 @@
     color: #fff;
     font-size: 1.5vw;
     font-family: 'Roboto';
-
   }
     
   .main-container > .menu {
     position: absolute;
-    left: 56%;
+    left: 55%;
     top: 65%;
+    transform: translate(-50%, -50%);
+    width: 60%;
     font-family: 'Roboto';
-    font-size: 1.1em;
+    font-size: 1.1vw;
   }
 
   .slide-left-right {
@@ -74,7 +75,7 @@
   .slide-left-right-white:after {
     content: '';
     display: block;
-    height: 3px;
+    height: 2px;
     width: 0;
     background: transparent;
     transition: width .5s ease, background-color .5s ease; /* .5 seonds for changes to the width and background-color */
