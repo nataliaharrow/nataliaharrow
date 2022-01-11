@@ -24,9 +24,6 @@ function Welcome() {
             <p>
                 <b>Software Engineer,</b> <i>currently at<mark className="blue"> <a href="https://newrelic.com/" target="_blank" rel="noreferrer" className="slide-left-right"> New Relic</a></mark></i>
             </p>
-            {/* <div>
-                <Menu></Menu>
-            </div> */}
             <p className='menu'>
                 <a href="/#about" className="slide-left-right-white"> about </a>
                 {bull}

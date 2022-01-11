@@ -58,8 +58,6 @@ function Skills() {
                     Node.js <br/>
                 </Typography>
             </Grid>
-            <Grid item xs={3} s={3} m={3} lg={3}><div></div></Grid>
-            <Grid item xs={3} s={3} m={3} lg={3}><div></div></Grid>
         </Grid>
     );
 }
