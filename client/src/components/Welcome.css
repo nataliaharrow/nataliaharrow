@@ -89,6 +89,12 @@
     background: #26a69a;
   }
 
+  .email-button {
+    text-decoration:none;
+    display: inline-block;
+    color:#18191b;
+  }
+
 mark.blue {
     color:#26a69a;
     background: none;
