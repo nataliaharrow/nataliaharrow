@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
         height: 300,
         width: 300,
         marginTop: "8%",
+        marginBottom: "4%",
         alignSelf:"center",
         borderRadius:"50%",
     },
@@ -45,7 +46,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function About() {
   const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
 
   return (
     <Box>
@@ -59,13 +59,22 @@ export default function About() {
                 Hi there!
             </Typography>
             <Typography variant="body1" className={classes.text}>
-            I'm Natalia and I'm a Software Engineer at New Relic. I work on the Unified Data Streams team where I explore the fun world of distributed streaming systems, Java and Kafka. <br/> 
-            {bull} I previously worked as a software engineering intern at Major League Baseball and MediaMath. <br/>
+            I'm Natalia and I'm a Software Engineer. I live in New York City where I recently graduated 
+            from the Grove School of Engineering at the City College of New York with a B.S. degree in Computer Science.
+            While at college, I interned at MediaMath, Major League Baseball and New Relic - 
+            the company where I returned to work full-time after graduation. I'm part of
+            the Unified Data Streams team where I get to learn about the ins and outs of large-scale data streaming systems.
+            I enjoy working on complex technical problems and I'm passionate about helping students from underrepresented backgrounds
+            suceed in the tech world. <br/>
+            I love traveling and exploring new restaurants. I am a New Yorker at heart but dream about moving to Southern California 
+            in the future! Meanwhile, I love living in Brooklyn with my husband and our sweet pup Ellie. <br/>
+            Reach out and say hello - I'd love to connect!
+           {/* {bull} I previously worked as a software engineering intern at Major League Baseball and MediaMath. <br/>
             {bull} I recently graduated cum laude with a B.S. degree in Computer Science from Grove School of Engineering at The City University of New York. <br/>
             {bull} I'm interested in large scale distributed systems and love improving my software engnieering skillks always striving to write better quality code <br/>
             {bull} I'm passionate about helping computer science students from underrepresented backgrounds fullfill their potential and navigate the tech field <br/>
             {bull} I love New York City and feel at home in Los Angeles and Warsaw <br/>
-            {bull} I'm a dog mom to my sweet pup Ellie <br/>
+            {bull} I'm a dog mom to my sweet pup Ellie <br/> */}
             </Typography>
             </CardContent>
         </div>
