@@ -69,12 +69,6 @@ export default function About() {
             I love traveling and exploring new restaurants. I am a New Yorker at heart but dream about moving to Southern California 
             in the future! Meanwhile, I love living in Brooklyn with my husband and our sweet pup Ellie. <br/>
             Reach out and say hello - I'd love to connect!
-           {/* {bull} I previously worked as a software engineering intern at Major League Baseball and MediaMath. <br/>
-            {bull} I recently graduated cum laude with a B.S. degree in Computer Science from Grove School of Engineering at The City University of New York. <br/>
-            {bull} I'm interested in large scale distributed systems and love improving my software engnieering skillks always striving to write better quality code <br/>
-            {bull} I'm passionate about helping computer science students from underrepresented backgrounds fullfill their potential and navigate the tech field <br/>
-            {bull} I love New York City and feel at home in Los Angeles and Warsaw <br/>
-            {bull} I'm a dog mom to my sweet pup Ellie <br/> */}
             </Typography>
             </CardContent>
         </div>
