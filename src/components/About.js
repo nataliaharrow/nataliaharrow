@@ -65,7 +65,7 @@ export default function About() {
             the company where I returned to work full-time after graduation. I'm part of
             the Unified Data Streams team where I get to learn about the ins and outs of large-scale data streaming systems.
             I enjoy working on complex technical problems and I'm passionate about helping students from underrepresented backgrounds
-            suceed in the tech world. <br/>
+            succeed in the tech world. <br/>
             I love traveling and exploring new restaurants. I am a New Yorker at heart but dream about moving to Southern California 
             in the future! Meanwhile, I love living in Brooklyn with my husband and our sweet pup Ellie. <br/>
             Reach out and say hello - I'd love to connect!
