@@ -29,7 +29,7 @@ const useStyles = makeStyles({
 
 function ResumeExperience() {
   const classes = useStyles();
-  
+
   const bull = <span className={classes.bullet}>•</span>;
 
   const [open, setOpen] = React.useState(false);
@@ -53,6 +53,10 @@ function ResumeExperience() {
   const handleClose = () => {
     setOpen(false);
   };
+
+  const NRFullTimeDescription = ["Part of the Unified Data Streams team where I learn about the ins and outs of a large scale data streaming systems.", 
+    "Participate in the team's on-call rotation - I am a sole pager holder during one-week long shifts. I respond to pages, triage, mitigate and resolve incidents or act as an Incident Comander responsible for all communication and coordination around the incident."
+  ]
 
   const NRInternDescription = ["Improved my team's performance monitoring Java library by designing, implementing and releasing a new API that reduces the costs of monitoring.", 
     "Refactored parts of New Relic's streaming services code base to integrate the API and monitor its impact.",
@@ -87,7 +91,7 @@ function ResumeExperience() {
         <Typography variant="h6" component="h2">
             <b>Software Engineer</b> at <i>New Relic </i>
             <label htmlFor="icon-button-file">
-            <IconButton onClick={() => handleClickOpen('Software Engineer', 'New Relic', 'Unified Data Streams Team', 'June 2021 - Present', 'New York, NY (Remote)', NRInternDescription)}>
+            <IconButton onClick={() => handleClickOpen('Software Engineer', 'New Relic', 'Unified Data Streams Team', 'June 2021 - Present', 'New York, NY (Remote)', NRFullTimeDescription)}>
               <InfoIcon className="fa fa-plus-circle" fontSize="small" color="disabled"/>
             </IconButton>
           </label>
