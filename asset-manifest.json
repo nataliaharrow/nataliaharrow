@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/nataliaharrow.github.io/static/css/main.69969889.chunk.css",
-    "main.js": "/nataliaharrow.github.io/static/js/main.0829509e.chunk.js",
-    "main.js.map": "/nataliaharrow.github.io/static/js/main.0829509e.chunk.js.map",
+    "main.js": "/nataliaharrow.github.io/static/js/main.c5092d12.chunk.js",
+    "main.js.map": "/nataliaharrow.github.io/static/js/main.c5092d12.chunk.js.map",
     "runtime-main.js": "/nataliaharrow.github.io/static/js/runtime-main.a1744093.js",
     "runtime-main.js.map": "/nataliaharrow.github.io/static/js/runtime-main.a1744093.js.map",
     "static/css/2.8ea76298.chunk.css": "/nataliaharrow.github.io/static/css/2.8ea76298.chunk.css",
@@ -24,6 +24,6 @@
     "static/css/2.8ea76298.chunk.css",
     "static/js/2.bd61d66e.chunk.js",
     "static/css/main.69969889.chunk.css",
-    "static/js/main.0829509e.chunk.js"
+    "static/js/main.c5092d12.chunk.js"
   ]
 }
