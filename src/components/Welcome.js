@@ -26,11 +26,11 @@ function Welcome() {
                 <b>Software Engineer,</b> <i>currently at<mark className="blue"> <a href="https://newrelic.com/" target="_blank" rel="noreferrer" className="slide-left-right"> New Relic</a></mark></i>
             </p>
             <p className='menu'>
-                <Link to="#about" className="slide-left-right-white"> about </Link>
+                <Link smooth to="#about" className="slide-left-right-white"> about </Link>
                 {bull}
-                <Link to="#resume" className="slide-left-right-white"> resume </Link>
+                <Link smooth to="#resume" className="slide-left-right-white"> resume </Link>
                 {bull}
-                <Link to="#contact" className="slide-left-right-white"> contact </Link>
+                <Link smooth to="#contact" className="slide-left-right-white"> contact </Link>
             </p>
         </div>
     );
