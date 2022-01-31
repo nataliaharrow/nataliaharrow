@@ -9,9 +9,9 @@ import App from './App';
 const Main = () => (
     <Routes>
       <Route exact path='/' element={<App/>}/>
-      <Route exact path="/about" element={<About/>}/>
-      <Route exact path="/contact" element={<Contact/>}/>
-      <Route exact path="/resume" element={<Resume/>}/>
+      <Route exact path="#about" element={<About/>}/>
+      <Route exact path="#contact" element={<Contact/>}/>
+      <Route exact path="#resume" element={<Resume/>}/>
     </Routes>
 )
 

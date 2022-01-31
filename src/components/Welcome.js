@@ -2,6 +2,7 @@ import React from 'react';
 import '../App.css';
 import './Welcome.css';
 import { makeStyles } from '@material-ui/core/styles';
+import { HashLink as Link } from 'react-router-hash-link';
 
 const useStyles = makeStyles({
     bullet: {
@@ -25,11 +26,11 @@ function Welcome() {
                 <b>Software Engineer,</b> <i>currently at<mark className="blue"> <a href="https://newrelic.com/" target="_blank" rel="noreferrer" className="slide-left-right"> New Relic</a></mark></i>
             </p>
             <p className='menu'>
-                <a href="/#about" className="slide-left-right-white"> about </a>
+                <Link to="#about" className="slide-left-right-white"> about </Link>
                 {bull}
-                <a href="/#resume" className="slide-left-right-white"> resume </a>
+                <Link to="#resume" className="slide-left-right-white"> resume </Link>
                 {bull}
-                <a href="/#contact" className="slide-left-right-white"> contact </a>
+                <Link to="#contact" className="slide-left-right-white"> contact </Link>
             </p>
         </div>
     );

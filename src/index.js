@@ -8,7 +8,7 @@ import Main from './Main';
 ReactDOM.render(
   <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Routes>
-      <Route path="/personal-website/" element={ <Main /> }>
+      <Route path="*" element={ <Main /> }>
       </Route>
     </Routes>
   </BrowserRouter>,
