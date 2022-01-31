@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter} from 'react-router-dom';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Main from './Main';
 
 ReactDOM.render(
   <BrowserRouter basename={process.env.PUBLIC_URL}>
-    <App/>
+    <Routes>
+      <Route path="*" element={ <Main /> }>
+      </Route>
+    </Routes>
   </BrowserRouter>,
   document.getElementById('root')
 );
