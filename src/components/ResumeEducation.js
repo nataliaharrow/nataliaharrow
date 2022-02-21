@@ -6,7 +6,9 @@ import Typography from '@material-ui/core/Typography';
 import { Divider } from '@material-ui/core';
 import InfoIcon from '@material-ui/icons/Info';
 import IconButton from '@material-ui/core/IconButton';
-import EducationDialog from './EducationDialog';
+import Dialog from '@material-ui/core/Dialog';
+import DialogContent from '@material-ui/core/DialogContent';
+import Slide from '@material-ui/core/Slide';
 
 const useStyles = makeStyles({
   root: {
@@ -34,38 +36,80 @@ const useStyles = makeStyles({
   pos: {
     marginTop: 3,
   },
+  link: {
+    fontSize: 15,
+    marginBottom: 3,
+    textAlign: "center",
+  },
 });
 
+const Transition = React.forwardRef(function Transition(props, ref) {
+    return <Slide direction="up" ref={ref} {...props} />;
+  });
+
+  
 function ResumeEducation() {
 
-    const [open, setOpen] = React.useState(false);
-    const [description, setDescription] = React.useState(null);
-    const [link, setLink] = React.useState(null);
+    const [googleBulletOpen, googleBulletSetOpen] = React.useState(false);
+    const [ghcBulletOpen, ghcBulletSetOpen] = React.useState(false);
+    const [fbBulletOpen, fbBulletSetOpen] = React.useState(false);
+    const [witBulletOpen, witBulletSetOpen] = React.useState(false);
+    const [hsacBulletOpen, hsacBulletSetOpen] = React.useState(false);
 
-    const handleClickOpen = (description, link) => {
-        setOpen(true);
-        setDescription(description);
-        setLink(link);
+    const handleGoogleClickOpen = () => {
+        googleBulletSetOpen(true);
+      };
+    
+    const handleGoogleClose = () => {
+        googleBulletSetOpen(false);
     };
 
-    const handleClose = () => {
-        setOpen(false);
+    const handleGhcClickOpen = () => {
+        ghcBulletSetOpen(true);
+    };
+    
+    const handleGhcClose = () => {
+        ghcBulletSetOpen(false);
+    };
+
+    const handleFbClickOpen = () => {
+        fbBulletSetOpen(true);
+    };
+    
+    const handleFbClose = () => {
+        fbBulletSetOpen(false);
+    };
+
+    const handleWitClickOpen = () => {
+        witBulletSetOpen(true);
+    };
+    
+    const handleWitClose = () => {
+        witBulletSetOpen(false);
+    };
+
+    const handleHsacClickOpen = () => {
+        hsacBulletSetOpen(true);
+    };
+    
+    const handleHsacClose = () => {
+        hsacBulletSetOpen(false);
     };
 
     const classes = useStyles();
   
     const bull = <span className={classes.bullet}>•</span>;
 
-    const GoogleBullet = "Selected as 1 of 20 female Computer Science students in North America, based on academic excellence and leadership potential."
-    const GHCBullet = "Received full funding to attend 2018 Grace Hopper Conference."
-    const FbBullet = "Selected as 1 of 30 students in NYC to attend a 10-week career workshop series."
-    const WiTBullet = "Helped over three dozen students from underrepresented backgrounds acquire skills necessary to launch careers in tech by organizing workshops, personalized study sessions and guest talks from industry professionals.";
-    const HSACBullet = "Encouraged dozens of students to pursue transfer to 4-year colleges by helping them access appropriate program and resource opportunities, and assist them in the application process.";
+    const GoogleBulletDescription = "Selected as 1 of 20 female Computer Science students in North America, based on academic excellence and leadership potential."
+    const GhcBulletDescription = "Received full funding to attend 2018 Grace Hopper Conference."
+    const FbBulletDescription = "Selected as 1 of 30 students in NYC to attend a 10-week career workshop series."
+    const WitBulletDescription = "Helped over three dozen students from underrepresented backgrounds acquire skills necessary to launch careers in tech by organizing workshops, personalized study sessions and guest talks from industry professionals.";
+    const HsacBulletDescription = "Encouraged dozens of students to pursue transfer to 4-year colleges by helping them access appropriate program and resource opportunities, and assist them in the application process.";
 
     const GoogleLink = <a href="https://docs.google.com/document/d/e/2PACX-1vRMfp-bkYg1yHGoU5DAa6jat1iD0VQhdXwfgGFw2AwqPOES6hT_jRVkXY9P1R3baSZI1bfcHKq8Gk-e/pub" target="_blank" rel="noreferrer" className="slide-left-right">2018 Google scholarship recipients</a>
     const FbLink = <a href="https://diversity.fb.com/initiatives/in-our-communities/" target="_blank" rel="noreferrer" className="slide-left-right">Facebook Above and Beyond Computer Science (ABCS)</a>
-    const GHCLink = <a href="https://ghc.anitab.org/" target="_blank" rel="noreferrer" className="slide-left-right">Grace Hopper Celebration</a>
-    const HSACLink = <a href="https://www.laguardiahonors.com/" target="_blank" rel="noreferrer" className="slide-left-right">Honors Student Adivosry Committee at LaGuardia Community College</a>
+    const GhcLink = <a href="https://ghc.anitab.org/" target="_blank" rel="noreferrer" className="slide-left-right">Grace Hopper Celebration</a>
+    const HsacLink = <a href="https://www.laguardiahonors.com/" target="_blank" rel="noreferrer" className="slide-left-right">Honors Student Adivosry Committee at LaGuardia Community College</a>
 
     return (
         <Card className={classes.root}>
@@ -85,33 +129,57 @@ function ResumeEducation() {
             <Typography component={'span'} className={classes.bulletPoint} color="textSecondary" >
                 {bull} <b>Google</b> Women Techmakers Scholar 2018 
                 <label htmlFor="icon-button-file">
-                <IconButton onClick={() => handleClickOpen(GoogleBullet, GoogleLink)}>
+                <IconButton onClick={() => handleGoogleClickOpen()}>
                     <InfoIcon className="fa fa-plus-circle" fontSize="small" color="disabled"/>
                 </IconButton>
                 </label> <br/>
-                { open ? (
-                    <EducationDialog handleClose={handleClose} description={description} link={link} open={open}/>
-                    ) : (<div></div>)
-                }
+                <Dialog 
+                    open={googleBulletOpen}
+                    TransitionComponent={Transition}
+                    keepMounted
+                    onClose={handleGoogleClose}
+                    aria-describedby="alert-dialog-slide-description"
+                >
+                    <DialogContent dividers className={classes.link}>
+                        {GoogleBulletDescription} <br/> <br/>
+                        {GoogleLink}
+                    </DialogContent>
+                </Dialog>
                 {bull} <b>Google</b> 2018 GHC Travel Grant Recipient 
                 <label htmlFor="icon-button-file">
-                <IconButton onClick={() => handleClickOpen(GHCBullet, GHCLink)}>
+                <IconButton onClick={() => handleGhcClickOpen()}>
                     <InfoIcon className="fa fa-plus-circle" fontSize="small" color="disabled"/>
                 </IconButton>
                 </label> <br/>
-                { open ? (
-                    <EducationDialog handleClose={handleClose} description={description} link={link} open={open}/>
-                    ) : (<div></div>)
-                }
+                <Dialog 
+                    open={ghcBulletOpen}
+                    TransitionComponent={Transition}
+                    keepMounted
+                    onClose={handleGhcClose}
+                    aria-describedby="alert-dialog-slide-description"
+                >
+                    <DialogContent dividers className={classes.link}>
+                        {GhcBulletDescription} <br/> <br/>
+                        {GhcLink}
+                    </DialogContent>
+                </Dialog>
                 {bull} <b>Facebook</b> Above and Beyond Computer Science Participant
                 <label htmlFor="icon-button-file">
-                <IconButton onClick={() => handleClickOpen(FbBullet, FbLink)}>
+                <IconButton onClick={() => handleFbClickOpen()}>
                     <InfoIcon className="fa fa-plus-circle" fontSize="small" color="disabled"/>
                 </IconButton>
-                { open ? (
-                    <EducationDialog handleClose={handleClose} description={description} link={link} open={open}/>
-                    ) : (<div></div>)
-                }
+                <Dialog 
+                    open={fbBulletOpen}
+                    TransitionComponent={Transition}
+                    keepMounted
+                    onClose={handleFbClose}
+                    aria-describedby="alert-dialog-slide-description"
+                >
+                    <DialogContent dividers className={classes.link}>
+                        {FbBulletDescription} <br/> <br/>
+                        {FbLink}
+                    </DialogContent>
+                </Dialog>
                 </label> <br/>
             </Typography>
         </CardContent>
@@ -125,23 +193,38 @@ function ResumeEducation() {
             <Typography component={'span'} className={classes.bulletPoint} color="textSecondary" >
                 {bull} <b>Women in Technology Club</b>, President & Co-Founder 
                 <label htmlFor="icon-button-file">
-                <IconButton onClick={() => handleClickOpen(WiTBullet, null)}>
+                <IconButton onClick={() => handleWitClickOpen()}>
                     <InfoIcon className="fa fa-plus-circle" fontSize="small" color="disabled"/>
                 </IconButton>
                 </label> <br/>
-                { open ? (
-                    <EducationDialog handleClose={handleClose} description={description} link={link} open={open}/>
-                    ) : (<div></div>)
-                }
+                <Dialog 
+                    open={witBulletOpen}
+                    TransitionComponent={Transition}
+                    keepMounted
+                    onClose={handleWitClose}
+                    aria-describedby="alert-dialog-slide-description"
+                >
+                    <DialogContent dividers className={classes.link}>
+                        {WitBulletDescription} 
+                    </DialogContent>
+                </Dialog>
                 {bull} <b>Honors Student Advisory Committee</b>, Key Member
                 <label htmlFor="icon-button-file">
-                <IconButton onClick={() => handleClickOpen(HSACBullet, HSACLink)}>
+                <IconButton onClick={() => handleHsacClickOpen()}>
                     <InfoIcon className="fa fa-plus-circle" fontSize="small" color="disabled"/>
                 </IconButton>
-                { open ? (
-                    <EducationDialog handleClose={handleClose} description={description} link={link} open={open}/>
-                    ) : (<div></div>)
-                }
+                <Dialog 
+                    open={hsacBulletOpen}
+                    TransitionComponent={Transition}
+                    keepMounted
+                    onClose={handleHsacClose}
+                    aria-describedby="alert-dialog-slide-description"
+                >
+                    <DialogContent dividers className={classes.link}>
+                        {HsacBulletDescription} <br></br>
+                        {HsacLink}
+                    </DialogContent>
+                </Dialog>
                 </label> <br/>
             </Typography>
         </CardContent>
