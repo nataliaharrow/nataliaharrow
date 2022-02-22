@@ -6,6 +6,7 @@ const useStyles = makeStyles({
     root: {
       minWidth: 275,
       marginLeft:"1%",
+      marginTop: 10,
       border: "none",
       boxShadow: "none" 
     },
