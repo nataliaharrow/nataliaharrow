@@ -21,23 +21,17 @@ const useStyles = makeStyles({
     border: "none",
     boxShadow: "none" 
   },
-  dialogRoot: {
-    minWidth: 275,
-  },
   bullet: {
     display: 'inline-block',
     margin: '0 6px',
     transform: 'scale(1.5)',
   },
-  bulletPoint: {
+  bulletItem: {
     fontSize: 16,
     marginBottom: 10,
   },
   title: {
     fontSize: 14,
-  },
-  pos: {
-    marginBottom: 12,
   },
 });
 
@@ -57,10 +51,10 @@ const styles = (theme) => ({
 const DialogTitle = withStyles(styles)((props) => {
   const { children, classes, onClose, ...other } = props;
   return (
-    <MuiDialogTitle disableTypography className={classes.dialogRoot} {...other}>
+    <MuiDialogTitle disableTypography className={classes.root} {...other}>
       <Typography >{children}</Typography>
       {onClose ? (
-        <IconButton aria-label="close" className={classes.closeButton} onClick={onClose}>
+        <IconButton className={classes.closeButton} onClick={onClose}>
           <CloseIcon />
         </IconButton>
       ) : null}
@@ -141,7 +135,7 @@ function ResumeExperience() {
 
   const nrFullTimeBulletList = NrFullTimeDescription.map((item) => 
     <Typography key={item} component="div">
-        <Box className={classes.bulletPoint} >
+        <Box className={classes.bulletItem} >
             {bull}
             {item}
         </Box>
@@ -150,7 +144,7 @@ function ResumeExperience() {
 
   const nrInternBulletList = NrInternDescription.map((item) => 
     <Typography key={item} component="div">
-        <Box className={classes.bulletPoint} >
+        <Box className={classes.bulletItem} >
             {bull}
             {item}
         </Box>
@@ -159,7 +153,7 @@ function ResumeExperience() {
 
   const mlbBulletList = mlbDescription.map((item) => 
   <Typography key={item} component="div">
-      <Box className={classes.bulletPoint} >
+      <Box className={classes.bulletItem} >
           {bull}
           {item}
       </Box>
@@ -168,7 +162,7 @@ function ResumeExperience() {
 
 const mmBulletList = mmDescription.map((item) => 
 <Typography key={item} component="div">
-    <Box className={classes.bulletPoint} >
+    <Box className={classes.bulletItem} >
         {bull}
         {item}
     </Box>
