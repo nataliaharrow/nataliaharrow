@@ -1,19 +1,20 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import { Divider } from '@material-ui/core';
-import InfoIcon from '@material-ui/icons/Info';
-import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close';
-
+import Divider from '@material-ui/core/Divider';
 import Dialog from '@material-ui/core/Dialog';
-import { withStyles } from '@material-ui/core/styles';
+import Slide from '@material-ui/core/Slide';
+import Box from '@material-ui/core/Box';
+import IconButton from '@material-ui/core/IconButton';
 import MuiDialogTitle from '@material-ui/core/DialogTitle';
 import MuiDialogContent from '@material-ui/core/DialogContent';
-import Slide from '@material-ui/core/Slide';
-import { Box } from '@material-ui/core';
+
+import InfoIcon from '@material-ui/icons/Info';
+import CloseIcon from '@material-ui/icons/Close';
+
+import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   root: {
@@ -133,41 +134,18 @@ function ResumeExperience() {
     "Successfully developed an automated deployment log of the latest software releases that goes out to management."
   ]
 
-  const nrFullTimeBulletList = NrFullTimeDescription.map((item) => 
-    <Typography key={item} component="div">
-        <Box className={classes.bulletItem} >
+  function bulletList(items) {
+    const bullets = items.map((item) => 
+      <Typography key={item} component="div">
+          <Box className={classes.bulletItem} >
             {bull}
             {item}
-        </Box>
-    </Typography>
-  );
+          </Box>
+      </Typography> 
+    );
 
-  const nrInternBulletList = NrInternDescription.map((item) => 
-    <Typography key={item} component="div">
-        <Box className={classes.bulletItem} >
-            {bull}
-            {item}
-        </Box>
-    </Typography>
-  );
-
-  const mlbBulletList = mlbDescription.map((item) => 
-  <Typography key={item} component="div">
-      <Box className={classes.bulletItem} >
-          {bull}
-          {item}
-      </Box>
-  </Typography>
-);
-
-const mmBulletList = mmDescription.map((item) => 
-<Typography key={item} component="div">
-    <Box className={classes.bulletItem} >
-        {bull}
-        {item}
-    </Box>
-</Typography>
-);
+    return bullets;
+  }
 
   return (
     <Card className={classes.root}>
@@ -186,128 +164,115 @@ const mmBulletList = mmDescription.map((item) =>
         </Typography>
         <Typography variant="h6" component="h2">
             <b>Software Engineer</b> at <i>New Relic </i>
-            <label htmlFor="icon-button-file">
-            <IconButton onClick={() => handleNrFullTimeOpen()}>
-              <InfoIcon className="fa fa-plus-circle" fontSize="small" color="disabled"/>
-            </IconButton>
-          </label>
+              <IconButton onClick={() => handleNrFullTimeOpen()}>
+                <InfoIcon className="fa fa-plus-circle" fontSize="small" color="disabled"/>
+              </IconButton>
           <Dialog 
             TransitionComponent={Transition} 
-            keepMounted onClose={handleNrFullTimeClose} 
-            aria-labelledby="customized-dialog-title" 
-            aria-describedby="alert-dialog-slide-description" 
+            keepMounted 
+            onClose={handleNrFullTimeClose} 
             open={nrFullTimeopen}>
             <DialogTitle id="customized-dialog-title" onClose={handleNrFullTimeClose} >
                 <b><i>Software Engineer,</i></b> New Relic <br/>
-                  Unified Data Streams Team <br></br>
-                <Typography component={'span'} className={classes.title} color="textSecondary">
+                Unified Data Streams Team <br></br>
+              <Typography component={'span'} className={classes.title} color="textSecondary">
                 June 2021 - Present {bull} New York, NY (Remote)
-                </Typography>
+              </Typography>
             </DialogTitle>
             <DialogContent dividers>
-                {nrFullTimeBulletList}
+              {bulletList(NrFullTimeDescription)}
             </DialogContent>
-        </Dialog>
+          </Dialog>
         </Typography>
       </CardContent>
 
       <CardContent >
         <Typography className={classes.title} color="textSecondary" >
-            June 2020 - September 2020
+          June 2020 - September 2020
         </Typography>
         <Typography className={classes.title} color="textSecondary" >
-            New York, NY {bull} Remote
+          New York, NY {bull} Remote
         </Typography>
         <Typography variant="h6" component="h2">
             <b>Software Engineering Intern</b> at <i>New Relic </i>
-            <label htmlFor="icon-button-file">
             <IconButton onClick={() => handleNrInternOpen()}>
               <InfoIcon className="fa fa-plus-circle" fontSize="small" color="disabled"/>
             </IconButton>
-          </label>
           <Dialog 
             TransitionComponent={Transition} 
             keepMounted 
             onClose={handleNrInternClose}
-            aria-labelledby="customized-dialog-title" 
-            aria-describedby="alert-dialog-slide-description" 
             open={nrInternOpen}>
             <DialogTitle id="customized-dialog-title" onClose={handleNrInternClose}>
                 <b><i>Software Engineering Intern,</i></b> New Relic <br/>
-                  Unified Data Streams Team <br></br>
-                <Typography component={'span'} className={classes.title} color="textSecondary">
-                  June 2020 - September 2020 {bull} New York, NY (Remote)
-                </Typography>
+                Unified Data Streams Team <br></br>
+              <Typography component={'span'} className={classes.title} color="textSecondary">
+                June 2020 - September 2020 {bull} New York, NY (Remote)
+              </Typography>
             </DialogTitle>
             <DialogContent dividers>
-                {nrInternBulletList}
+              {bulletList(NrInternDescription)}
             </DialogContent>
-        </Dialog>
+          </Dialog>
         </Typography>
       </CardContent>
       <CardContent>
         <Typography className={classes.title} color="textSecondary" >
-            June 2019 - August 2019
+          June 2019 - August 2019
         </Typography>
         <Typography className={classes.title} color="textSecondary" >
-            New York, NY
+          New York, NY
         </Typography>
         <Typography variant="h6" component="h2">
-            <b>Enterprise Technology Intern</b> at <i>Major League Baseball </i>
-            <label htmlFor="icon-button-file">
+          <b>Enterprise Technology Intern</b> at <i>Major League Baseball </i>
             <IconButton onClick={() => handleMlbOpen()}>
               <InfoIcon className="fa fa-plus-circle" fontSize="small" color="disabled"/>
             </IconButton>
-          </label>
           <Dialog 
             TransitionComponent={Transition} 
-            keepMounted onClose={handleMlbClose} 
-            aria-labelledby="customized-dialog-title" 
-            aria-describedby="alert-dialog-slide-description" 
+            keepMounted 
+            onClose={handleMlbClose} 
             open={mlbOpen}>
             <DialogTitle id="customized-dialog-title" onClose={handleMlbClose}>
-                <b><i>Enterprise Technology Intern,</i></b> Major League Baseball <br/>
-                    Enterprise Technology Team
-                <Typography component={'span'} className={classes.title} color="textSecondary">
-                    June 2019 - August 2019 {bull} New York, NY
-                </Typography>
+              <b><i>Enterprise Technology Intern,</i></b> Major League Baseball <br/>
+                  Enterprise Technology Team
+              <Typography component={'span'} className={classes.title} color="textSecondary">
+                June 2019 - August 2019 {bull} New York, NY
+              </Typography>
             </DialogTitle>
             <DialogContent dividers>
-                {mlbBulletList}
+              {bulletList(mlbDescription)}
             </DialogContent>
-        </Dialog>
+          </Dialog>
         </Typography>
       </CardContent>
       <CardContent>
         <Typography className={classes.title} color="textSecondary" >
-            January 2018
+          January 2018
         </Typography>
         <Typography className={classes.title} color="textSecondary" >
-            New York, NY
+          New York, NY
         </Typography>
         <Typography variant="h6" component="h2">
             <b>Software Engineering Intern</b> at <i>MediaMath </i>
-            <label htmlFor="icon-button-file">
             <IconButton onClick={() => handleMmOpen()}>
               <InfoIcon className="fa fa-plus-circle" fontSize="small" color="disabled"/>
             </IconButton>
-          </label>
           <Dialog 
             TransitionComponent={Transition} 
-            keepMounted onClose={handleMmClose} 
-            aria-labelledby="customized-dialog-title" 
-            aria-describedby="alert-dialog-slide-description" 
+            keepMounted 
+            onClose={handleMmClose} 
             open={mmOpen}>
             <DialogTitle id="customized-dialog-title" onClose={handleMmClose}>
-                <b><i>Software Engineering Intern,</i></b> MediaMath <br/>
-                <Typography component={'span'} className={classes.title} color="textSecondary">
-                  January 2018 {bull} New York, NY
-                </Typography>
+              <b><i>Software Engineering Intern,</i></b> MediaMath <br/>
+              <Typography component={'span'} className={classes.title} color="textSecondary">
+                January 2018 {bull} New York, NY
+              </Typography>
             </DialogTitle>
             <DialogContent dividers>
-                {mmBulletList}
+              {bulletList(mmDescription)}
             </DialogContent>
-        </Dialog>
+          </Dialog>
         </Typography>
       </CardContent>
     </Card>
