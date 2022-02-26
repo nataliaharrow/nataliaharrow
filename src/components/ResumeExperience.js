@@ -21,23 +21,17 @@ const useStyles = makeStyles({
     border: "none",
     boxShadow: "none" 
   },
-  dialogRoot: {
-    minWidth: 275,
-  },
   bullet: {
     display: 'inline-block',
     margin: '0 6px',
     transform: 'scale(1.5)',
   },
-  bulletPoint: {
+  bulletItem: {
     fontSize: 16,
     marginBottom: 10,
   },
   title: {
     fontSize: 14,
-  },
-  pos: {
-    marginBottom: 12,
   },
 });
 
@@ -57,10 +51,10 @@ const styles = (theme) => ({
 const DialogTitle = withStyles(styles)((props) => {
   const { children, classes, onClose, ...other } = props;
   return (
-    <MuiDialogTitle disableTypography className={classes.dialogRoot} {...other}>
+    <MuiDialogTitle disableTypography className={classes.root} {...other}>
       <Typography >{children}</Typography>
       {onClose ? (
-        <IconButton aria-label="close" className={classes.closeButton} onClick={onClose}>
+        <IconButton className={classes.closeButton} onClick={onClose}>
           <CloseIcon />
         </IconButton>
       ) : null}
@@ -88,7 +82,7 @@ function ResumeExperience() {
   const [mlbOpen, setMlbOpen] = React.useState(false);
   const [mmOpen, setMmOpen] = React.useState(false);
 
-  const handleNrFullTimeClickOpen = () => {
+  const handleNrFullTimeOpen = () => {
     setNrFullTimeOpen(true);
   };
 
@@ -96,7 +90,7 @@ function ResumeExperience() {
     setNrFullTimeOpen(false);
   };
   
-  const handleNrInternClickOpen = () => {
+  const handleNrInternOpen = () => {
     setNrInternOpen(true);
   };
 
@@ -104,7 +98,7 @@ function ResumeExperience() {
     setNrInternOpen(false);
   };
 
-  const handleMlbClickOpen = () => {
+  const handleMlbOpen = () => {
     setMlbOpen(true);
   };
 
@@ -112,7 +106,7 @@ function ResumeExperience() {
     setMlbOpen(false);
   };
 
-  const handleMmClickOpen = () => {
+  const handleMmOpen = () => {
     setMmOpen(true);
   };
 
@@ -141,7 +135,7 @@ function ResumeExperience() {
 
   const nrFullTimeBulletList = NrFullTimeDescription.map((item) => 
     <Typography key={item} component="div">
-        <Box className={classes.bulletPoint} >
+        <Box className={classes.bulletItem} >
             {bull}
             {item}
         </Box>
@@ -150,7 +144,7 @@ function ResumeExperience() {
 
   const nrInternBulletList = NrInternDescription.map((item) => 
     <Typography key={item} component="div">
-        <Box className={classes.bulletPoint} >
+        <Box className={classes.bulletItem} >
             {bull}
             {item}
         </Box>
@@ -159,7 +153,7 @@ function ResumeExperience() {
 
   const mlbBulletList = mlbDescription.map((item) => 
   <Typography key={item} component="div">
-      <Box className={classes.bulletPoint} >
+      <Box className={classes.bulletItem} >
           {bull}
           {item}
       </Box>
@@ -168,7 +162,7 @@ function ResumeExperience() {
 
 const mmBulletList = mmDescription.map((item) => 
 <Typography key={item} component="div">
-    <Box className={classes.bulletPoint} >
+    <Box className={classes.bulletItem} >
         {bull}
         {item}
     </Box>
@@ -193,7 +187,7 @@ const mmBulletList = mmDescription.map((item) =>
         <Typography variant="h6" component="h2">
             <b>Software Engineer</b> at <i>New Relic </i>
             <label htmlFor="icon-button-file">
-            <IconButton onClick={() => handleNrFullTimeClickOpen()}>
+            <IconButton onClick={() => handleNrFullTimeOpen()}>
               <InfoIcon className="fa fa-plus-circle" fontSize="small" color="disabled"/>
             </IconButton>
           </label>
@@ -227,7 +221,7 @@ const mmBulletList = mmDescription.map((item) =>
         <Typography variant="h6" component="h2">
             <b>Software Engineering Intern</b> at <i>New Relic </i>
             <label htmlFor="icon-button-file">
-            <IconButton onClick={() => handleNrInternClickOpen()}>
+            <IconButton onClick={() => handleNrInternOpen()}>
               <InfoIcon className="fa fa-plus-circle" fontSize="small" color="disabled"/>
             </IconButton>
           </label>
@@ -261,7 +255,7 @@ const mmBulletList = mmDescription.map((item) =>
         <Typography variant="h6" component="h2">
             <b>Enterprise Technology Intern</b> at <i>Major League Baseball </i>
             <label htmlFor="icon-button-file">
-            <IconButton onClick={() => handleMlbClickOpen()}>
+            <IconButton onClick={() => handleMlbOpen()}>
               <InfoIcon className="fa fa-plus-circle" fontSize="small" color="disabled"/>
             </IconButton>
           </label>
@@ -294,7 +288,7 @@ const mmBulletList = mmDescription.map((item) =>
         <Typography variant="h6" component="h2">
             <b>Software Engineering Intern</b> at <i>MediaMath </i>
             <label htmlFor="icon-button-file">
-            <IconButton onClick={() => handleMmClickOpen()}>
+            <IconButton onClick={() => handleMmOpen()}>
               <InfoIcon className="fa fa-plus-circle" fontSize="small" color="disabled"/>
             </IconButton>
           </label>
