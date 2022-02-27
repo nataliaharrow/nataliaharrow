@@ -35,7 +35,7 @@ const useStyles = makeStyles({
   },
   link: {
     fontSize: 15,
-    marginBottom: 5,
+    marginBottom: 15,
     textAlign: "center",
   },
 });
