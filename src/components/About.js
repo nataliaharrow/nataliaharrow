@@ -59,15 +59,17 @@ export default function About() {
                 Hi there!
             </Typography>
             <Typography variant="body1" className={classes.text}>
-            I'm Natalia and I'm a Software Engineer. I live in New York City where I recently graduated 
-            from the Grove School of Engineering at the City College of New York with a B.S. degree in Computer Science.
-            While at college, I interned at MediaMath, Major League Baseball and New Relic - 
-            the company where I returned to work full-time after graduation. I'm part of
-            the Unified Data Streams team where I get to learn about the ins and outs of large-scale data streaming systems.
-            I enjoy working on complex technical problems and I'm passionate about helping students from underrepresented backgrounds
+            I'm Natalia and I'm a Software Engineer.
+            I live in New York City where I recently graduated from the Grove School of Engineering at the City College of New York 
+            with a B.S. degree in Computer Science.
+            While at college I interned at MediaMath, Major League Baseball and New Relic - 
+            the company where I returned to work full-time after graduation. At New Relic, I'm part of
+            the Unified Data Streams team where I get to work on large-scale data streaming pipeline and learn the ins and outs of
+            Java, Kafka and distributed systems.
+            I truly enjoy working on complex technical problems and I'm passionate about helping students from underrepresented backgrounds
             succeed in the tech world. <br/>
-            I love traveling and exploring new restaurants. I am a New Yorker at heart but dream about moving to Southern California 
-            in the future! Meanwhile, I love living in Brooklyn with my husband and our sweet pup Ellie. <br/>
+            In my free time, I love exploring new restaurants and taking long walks with my husband and our sweet pup 
+            Ellie. <br/>
             Reach out and say hello - I'd love to connect!
             </Typography>
             </CardContent>
