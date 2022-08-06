@@ -1,6 +1,6 @@
 {
-  "name": "personal-website",
-  "homepage": "https://nataliaharrow.github.io/personal-website/",
+  "name": "nataliaharrow.github.io",
+  "homepage": "https://nataliaharrow.github.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
