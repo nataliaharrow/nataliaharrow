@@ -4,6 +4,11 @@ import './Welcome.css';
 import { makeStyles } from '@material-ui/core/styles';
 import { HashLink as Link } from 'react-router-hash-link';
 
+import smoothscroll from 'smoothscroll-polyfill';
+
+// kick off the polyfill!
+smoothscroll.polyfill();
+
 const useStyles = makeStyles({
     bullet: {
       display: 'inline-block',
