@@ -1,7 +1,6 @@
 import React from 'react';
 import '../App.css';
 import './Welcome.css';
-import Image from '../backgroundPic2.jpeg';
 import smoothscroll from 'smoothscroll-polyfill';
 import {Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
@@ -22,35 +21,22 @@ function Welcome() {
     const bull = <span className={classes.bullet}>•</span>;
 
     const styles = {
-        gridImage: {
-            backgroundImage: `url(${Image})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            width: `calc(100vw + 48px)`,
-            height: `calc(50vw + 10px)`,
-            margin: -24,
-            padding: 24,
-            boxShadow: 'inset 0 0 0 1000px rgba(0, 0, 0, 0.2)'
-        }, 
-        gridContainer: {
-            marginLeft: '20vw',
-            marginTop: '21vw'
-        },
         titleName: {
-            color: "#fff",
-            fontSize: "3.9vw",
+            color: "#444343",
+            fontSize: 80,
             fontFamily: "BlinkMacSystemFont",
-            marginBottom: '-1.5vw'
+            marginBottom: '-1.2vw'
         },
         intro: {
             marginTop: '0vw',
             marginBottom: '3vw',
             marginLeft: '.5vw',
-            color: '#fff',
-            fontSize: '1.4vw',
+            color: '#444343',
+            fontSize: 27,
         },
         links: {
             marginLeft: '6vw',
+            fontSize: 20
         }
     };
 
