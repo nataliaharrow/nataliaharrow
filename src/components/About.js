@@ -1,46 +1,27 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import image from '../photo3.jpg';
 import { Box } from '@material-ui/core';
 import '@fontsource/roboto/300.css';
 
 const useStyles = makeStyles((theme) => ({
-    main: {
-        minWidth:100,
-        minHeight:100
-    }, 
     root: {
-        display: 'flex',
-        border: "none",
-        boxShadow: "none",
+        // display: 'flex',
+        // border: "none",
+        // boxShadow: "none",
     },
     details: {
         display: 'flex',
         flexDirection: 'column',
     },
-    photo: {
-        height: 300,
-        width: 300,
-        marginTop: "8%",
-        marginBottom: "4%",
-        alignSelf:"center",
-        borderRadius:"50%",
-    },
-    title : {
-        marginLeft:"20%",
-        fontFamily: "Roboto",
-    },
     text: {
-        maxWidth:1000,
-        marginLeft:"20%",
+        // maxWidth:800,
+        marginLeft:"2%",
         marginTop:"2%",
-        marginBottom: "10%",
         fontFamily: "Roboto",
         fontSize:17,
-        lineHeight:2
+        lineHeight:2,
     }
 }));
 
@@ -49,29 +30,29 @@ export default function About() {
 
   return (
     <Box>
-        <CardMedia
-            className={classes.photo}
-            image={image}
-        />
         <div className={classes.details}>
             <CardContent className={classes.content}>
-            <Typography component="h6" variant="h6" className={classes.title}>
-                Hi there!
-            </Typography>
-            <Typography variant="body1" className={classes.text}>
-            I'm Natalia and I'm a Software Engineer.
-            I live in New York City where I recently graduated from the Grove School of Engineering at the City College of New York 
-            with a B.S. degree in Computer Science.
-            While at college I interned at MediaMath, Major League Baseball and New Relic - 
-            the company where I returned to work full-time after graduation. At New Relic, I'm part of
-            the Unified Data Streams team where I get to work on large-scale data streaming pipeline and learn the ins and outs of
-            Java, Kafka and distributed systems.
-            I truly enjoy working on complex technical problems and I'm passionate about helping students from underrepresented backgrounds
-            succeed in the tech world. <br/>
-            In my free time, I love exploring new restaurants and taking long walks with my husband and our sweet pup 
-            Ellie. <br/>
-            Reach out and say hello - I'd love to connect!
-            </Typography>
+                <Typography variant="body1" className={classes.text}>
+                Hello!
+                <br/><br/> 
+                My name is Natalia and I build things with code. My interest in technology started when in
+                2014 I dropped out of law school and while searching for a new path, I discovered an online
+                programming class. I fell in love with coding and enrolled in a CS program. Fast-forward to 
+                today, and I hold a B.S. degree in Computer Science and work as a Software Engineer.
+                <br/><br/>
+                While at college, I interned at MediaMath, Major League Baseball, and New Relic, 
+                where I returned to work full-time after graduation. I'm part of the Telemetry Data 
+                Platform org where I work on large-scale data streaming pipelines and use technologies 
+                like Java, Kafka, Kubernetes, Thrift, GraphQL, and more. I genuinely enjoy working 
+                on complex technical problems and am passionate about helping students from 
+                underrepresented backgrounds succeed in the tech world.
+                <br/><br/>
+                In my free time, I love exploring new restaurants and taking long walks around New 
+                York City where I live with my husband and our sweet pup Ellie.
+                <br/><br/> 
+                Reach out and say hello - I'd love to connect!
+
+                </Typography>
             </CardContent>
         </div>
     </Box>
