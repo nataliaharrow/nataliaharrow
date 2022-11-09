@@ -2,9 +2,10 @@ import React from 'react';
 import '../App.css';
 import './Welcome.css';
 import smoothscroll from 'smoothscroll-polyfill';
-import {Grid, Typography } from '@material-ui/core';
+import {CardMedia, Grid, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { HashLink as Link } from 'react-router-hash-link';
+import image from '../photo3.jpg';
 
 smoothscroll.polyfill();
 
@@ -13,6 +14,10 @@ const useStyles = makeStyles({
       display: 'inline-block',
       margin: '0 .1vw',
       transform: 'scale(0.1)',
+    },
+    photo: {
+        height: 450,
+        width: 350,
     },
   });
 
@@ -23,29 +28,29 @@ function Welcome() {
     const styles = {
         titleName: {
             color: "#444343",
-            fontSize: 80,
+            fontSize: 60,
             fontFamily: "BlinkMacSystemFont",
             marginBottom: '-1.2vw'
         },
         intro: {
             marginTop: '0vw',
             marginBottom: '3vw',
-            marginLeft: '.5vw',
+            // marginLeft: '.5vw',
             color: '#444343',
-            fontSize: 27,
+            fontSize: 22,
         },
         links: {
-            marginLeft: '6vw',
+            // marginLeft: '6vw',
             fontSize: 20
         }
     };
 
     return (
-        <Grid container style={styles.gridImage}>
-            <Grid style={styles.gridContainer}>
-                <Grid item xs={12} sm={12} md={12} lg={12}>
+        <Grid container spacing={7}>
+            <Grid item xs={12} sm={6} md={6} lg={6}>
+                <Grid>
                     <Typography style={styles.titleName} variant="subtitle1" gutterBottom>
-                    <b>Natalia Harrow</b>
+                        <b>Natalia Harrow</b>
                     </Typography>
                     <Typography style={styles.intro} color="textSecondary">
                         <b>Software Engineer,</b> <i>currently at<mark className="blue"> <a href="https://newrelic.com/" target="_blank" rel="noreferrer" className="slide-left-right"> New Relic</a></mark></i>
@@ -58,6 +63,12 @@ function Welcome() {
                         <Link smooth to="#contact" className="slide-left-right-white"> contact </Link>
                     </Grid>
                 </Grid>
+            </Grid>
+            <Grid item xs={12} sm={6} md={6} lg={6}>
+                <CardMedia
+                    className={classes.photo}
+                    image={image}
+                />
             </Grid>
         </Grid>
     );

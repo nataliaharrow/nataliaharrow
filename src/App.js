@@ -5,7 +5,6 @@ import Contact from './components/Contact';
 import { Container, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core';
 import Resume from './components/Resume';
-import Image from './backgroundPic2.jpeg';
 
 const useStyles = makeStyles((theme) => ({
   welcomeGridOut: {
@@ -14,24 +13,26 @@ const useStyles = makeStyles((theme) => ({
     // backgroundSize: 'cover',
     // backgroundPosition: 'center',
     width: '100vw',
-    height: '100vh',
-    justify: 'center',
-    alignItems: 'center',
+    // height: '100',
+    // justify: 'center',
+    // alignItems: 'center',
   }, 
   welcomeGridIn: {
-    marginTop: '15%',
+    marginTop: '10%',
     marginLeft: '20%',
     marginRight: '20%',
+    marginBottom: '10%',
   }, 
   aboutGridOut: {
-    width: '100vw',
-    minHeight: '100vh',
+    // width: '100vw',
+    // minHeight: '100vh',
+    marginBottom: '23%',
     spacing: 10,
     justify: 'center',
     alignItems: 'center'
   }, 
   aboutGridIn: {
-    marginTop: '4%',
+    marginTop: '5%',
   }, 
   contactGrid: {
     width: '100vw',
