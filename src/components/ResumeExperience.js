@@ -116,10 +116,9 @@ function ResumeExperience() {
   };
 
   const NrFullTimeDescription = [
-    "Member of the Unified Data Streams team where I get to work on Tier 1 distributed data streaming systems powering New Relic Alerts product.", 
+    "Member of the Unified Data Streams team where I get to work on Tier 1 distributed data streaming systems powering some of New Relic major products like Alerts.", 
     "I use Java and Kafka to build and improve services that aggregate, filter, transform and export large quantities of real-time data.",
-    "I participate in my team's on-call rotation. I am a sole pager holder during one-week long shifts when I respond to pages, triage, mitigate and resolve incidents.",
-    "I improved my team's on-call process by creating a comprehensive on-call guide and several runbooks, and providing on-call training to new team members."
+    "I participate in my team's on-call rotation. I am a sole pager holder during one-week long shifts when I respond to pages, triage, mitigate and resolve incidents."
   ]
 
   const NrInternDescription = ["Improved my team's performance monitoring Java library by designing, implementing and releasing a new API that reduces the costs of monitoring.", 
