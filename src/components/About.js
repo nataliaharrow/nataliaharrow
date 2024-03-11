@@ -16,7 +16,6 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
     },
     text: {
-        // maxWidth:800,
         marginLeft:"2%",
         marginTop:"2%",
         fontFamily: "Roboto",

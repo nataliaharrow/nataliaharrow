@@ -8,14 +8,9 @@ import Resume from './components/Resume';
 
 const useStyles = makeStyles((theme) => ({
   welcomeGridOut: {
-    // backgroundImage: `url(${Image})`,
-    // boxShadow: 'inset 0 0 0 1000px rgba(0, 0, 0, .5)',
-    // backgroundSize: 'cover',
-    // backgroundPosition: 'center',
     width: '100vw',
-    // height: '100',
-    // justify: 'center',
-    // alignItems: 'center',
+    minHeight: '100vh',
+  
   }, 
   welcomeGridIn: {
     marginTop: '10%',
@@ -24,8 +19,8 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '10%',
   }, 
   aboutGridOut: {
-    // width: '100vw',
-    // minHeight: '100vh',
+    width: '100vw',
+    minHeight: '100vh',
     marginBottom: '23%',
     spacing: 10,
     justify: 'center',

@@ -26,6 +26,11 @@ function Welcome() {
     const bull = <span className={classes.bullet}>•</span>;
 
     const styles = {
+        section : {
+            marginTop: '1vw',
+            marginLeft: '1vw',
+        }
+        ,
         titleName: {
             color: "#444343",
             fontSize: 60,
@@ -33,9 +38,8 @@ function Welcome() {
             marginBottom: '-1.2vw'
         },
         intro: {
-            marginTop: '0vw',
+            marginTop: '1vw',
             marginBottom: '3vw',
-            // marginLeft: '.5vw',
             color: '#444343',
             fontSize: 22,
         },
@@ -46,7 +50,7 @@ function Welcome() {
     };
 
     return (
-        <Grid container spacing={7}>
+        <Grid style={styles.section} container spacing={10}>
             <Grid item xs={12} sm={6} md={6} lg={6}>
                 <Grid>
                     <Typography style={styles.titleName} variant="subtitle1" gutterBottom>
